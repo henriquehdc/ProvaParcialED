@@ -22,12 +22,12 @@ public class Lista {
 		if (inicio == null){
 			inicio = aux;
 			fim = aux;
-		}else if(inicio.cor == "verde"){
+		}else if(inicio.cor.equalsIgnoreCase("verde")){
 				inicio = aux;				
 				inicio.prox = aux2;
 				}else {	
 					do {
-						if(aux2.cor == "verde"){
+						if(aux2.cor.equalsIgnoreCase("verde")){
 							aux3.prox = aux;
 							aux.prox = aux2;
 							achou = true;

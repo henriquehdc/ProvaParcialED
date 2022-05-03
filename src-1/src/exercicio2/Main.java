@@ -14,9 +14,8 @@ public class Main {
 		// remo��o de alguns motoristas da fila
 		fila.desenfileirar();
 		fila.desenfileirar();
-		//System.out.println(fila.inicio.motorista.getNome());
+
 		// impress�o dos dados dos motoristas que ainda est�o na fila
 		fila.mostrarDados();		
-
 	}
 }
