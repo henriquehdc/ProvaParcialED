@@ -14,21 +14,34 @@ public class Main {
 		
 		// inverte os elementos da lista
 		inverter(lista);
+	
 		
 		// imprime os elementos da lista
 		lista.imprimir();
+
 	}
 	
 	public static void inverter(Lista lista) {
 		No aux = lista.fim;
 		lista.inicio= aux;
-		
+		No aux2 = null;
+
 			while(aux != null){
 				if(aux.esq == null){
 					lista.fim = aux;					
 				}
-					aux.dir = aux.esq;
-					aux = aux.esq;
+					if(aux.dir == null){
+						aux2 = aux.esq;
+						aux.dir = aux.esq;
+						aux.esq = null;
+						aux = aux2;			
+					}else{
+						aux2 = aux.dir;
+						aux.dir = aux.esq;
+						aux.esq = aux2;
+						aux = aux.dir;
+					}
+
 			}	
 			
 			
