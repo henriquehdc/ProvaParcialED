@@ -18,17 +18,29 @@ public class Fila {
 	
 	// m�todo para desenfileirar um elemento da fila, ou seja, remover o primeiro elemento
 	public void desenfileirar() {
-		No aux = inicio.dir;
-		inicio = aux;
-		inicio.esq = null;		
+
+		if(inicio == null){
+			System.out.println("Não existem mais motoristas para desenfileirar");
+		}else{
+			if(inicio.dir == null){
+				inicio = null;
+			}else{
+				inicio = inicio.dir;
+				inicio.esq = null;
+			}		
+		}			
 	}
 	
 	// m�todo para exibir os dados (nome e placa) dos motoristas
 	public void mostrarDados() {
 		No aux = inicio;
-		while(aux != null){
-			System.out.println("Motorista: " +aux.motorista.getNome() +", Placa: " +aux.motorista.getPlaca());
-			aux = aux.dir;
+		if(aux == null){
+			System.out.println("Não existem mais veiculos na fila");
+		}else{
+			while(aux != null){
+				System.out.println("Motorista: " +aux.motorista.getNome() +", Placa: " +aux.motorista.getPlaca());
+				aux = aux.dir;
+			}
 		}
 	}
 }

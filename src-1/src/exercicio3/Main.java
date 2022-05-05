@@ -22,10 +22,15 @@ public class Main {
 	public static void inverter(Lista lista) {
 		No aux = lista.fim;
 		lista.inicio= aux;
-
+		
 			while(aux != null){
-				aux.dir = aux.esq;
-				aux = aux.esq;
-			}		
+				if(aux.esq == null){
+					lista.fim = aux;					
+				}
+					aux.dir = aux.esq;
+					aux = aux.esq;
+			}	
+			
+			
 	}
 }

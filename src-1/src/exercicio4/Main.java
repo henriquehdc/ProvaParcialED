@@ -11,7 +11,7 @@ public class Main {
 		lista.inserir(15);
 		lista.inserir(-3);
 		lista.inserir(0);
-				
+		
 		// impress�o dos elementos da lista
 		lista.imprimir();
 
