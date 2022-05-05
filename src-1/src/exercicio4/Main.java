@@ -8,7 +8,9 @@ public class Main {
 		// inser��o dos elementos na lista
 		lista.inserir(10);
 		lista.inserir(25);
+		lista.inserir(25);
 		lista.inserir(15);
+		lista.inserir(-3);
 		lista.inserir(-3);
 		lista.inserir(0);
 		

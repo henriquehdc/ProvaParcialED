@@ -15,7 +15,7 @@ public class Lista {
 				inicio = aux;
 				fim = aux;
 			}else if (inicio.dir == null){
-						if(aux.dado > inicio.dado){
+						if(aux.dado >= inicio.dado){
 							inicio.dir = aux;
 							fim = aux;
 							fim.esq = inicio;
@@ -27,7 +27,7 @@ public class Lista {
 	
 					}else{					
 						while (aux2 != null){
-							if(aux.dado > aux2.dado){
+							if(aux.dado >= aux2.dado){
 								aux2 = aux2.dir;
 							}else{
 								if(aux2.esq == null){
