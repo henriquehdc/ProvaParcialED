@@ -11,15 +11,15 @@ public class Lista {
 		No aux2 = inicio;
 		Boolean achou = false;
 	
-			if (inicio == null){
+			if (inicio == null){ //Se a lista estiver nula inicio e fim aponta para o auxiliar que chegou 
 				inicio = aux;
 				fim = aux;
-			}else if (inicio.dir == null){
-						if(aux.dado >= inicio.dado){
+			}else if (inicio.dir == null){ // Se só existir um elemento na lista 
+						if(aux.dado >= inicio.dado){ //Se o aux chegar e foir maior que o inicio ele vai para o fim
 							inicio.dir = aux;
 							fim = aux;
 							fim.esq = inicio;
-						}else{
+						}else{// Caso contrário ele é inserido no inicio
 							aux.dir = aux2;
 							inicio = aux;						
 							fim.esq = aux;
